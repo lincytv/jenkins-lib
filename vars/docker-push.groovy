@@ -1,5 +1,5 @@
 def call(repo,image_name,env)
-withCredentials(usernamePassword[(credentialsId: "docker_login_${env}", usernameVariable: $username, passwordVariable: $password]))
+withCredentials(usernamePassword[(credentialsId: 'docker_login_dev', usernameVariable: $username, passwordVariable: $password]))
 {
     sh"""
         docker login ${repo} -u ${username} -p ${password}
