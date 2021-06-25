@@ -1,5 +1,5 @@
 def call(repo,image_name,env)
-withCredentials(usernamePassword[(credentialsId: 'docker_login_dev', Username: 'Username', Password: 'Password')])
+withCredentials([usernamePassword(credentialsId: 'docker_login_dev', Username: 'Username', Password: 'Password')])
 {
     sh"""
         echo "docker push";
