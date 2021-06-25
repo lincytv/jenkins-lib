@@ -1,5 +1,5 @@
 message = "test"
-def mesg_print(message){
+def call(message){
  echo (message);
 }
 
