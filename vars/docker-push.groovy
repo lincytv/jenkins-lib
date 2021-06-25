@@ -1,4 +1,4 @@
-def call(repo,image_name,env) {
+def call(repo,image_name) {
     sh """
         echo "docker push"
         docker login ${repo} -u ${Username} -p ${Password}
